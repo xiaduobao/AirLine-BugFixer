@@ -12,7 +12,7 @@ import java.util.List;
 /**
  * Created by jiabaowang on 2018/4/10.
  */
-public class AutoBookBugFixMain {
+public class AutoBookBugFixerMain {
     /**
      * @param args
      * @throws IOException
