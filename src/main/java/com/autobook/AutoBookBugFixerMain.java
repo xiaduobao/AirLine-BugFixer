@@ -25,10 +25,12 @@ public class AutoBookBugFixerMain {
      */
 
     public static void main(String[] args) throws IOException {
+        long time = System.currentTimeMillis();
         PatternRegex regex = new PatternRegex();
         AutoBookBuilder bookBuilder = new AutoBookBuilder(regex);
         List<AutoBookRequest> requests = bookBuilder.buildFromUri("");
         AbstractPrinter<AutoBookRequest,Object> printer = new AutoBookRequestPrinter();
         printer.print(requests);
+        System.out.println("Total time : " + (System.currentTimeMillis() - time ));
     }
 }

@@ -1,6 +1,6 @@
 package com.autobook.bean;
 
-import com.fasterxml.jackson.databind.annotation.JsonAppend;
+import com.autobook.annotation.CollectField;
 
 import javax.xml.bind.annotation.*;
 import java.io.Serializable;
@@ -11,6 +11,7 @@ import java.util.List;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlRootElement(name = "AutoBookRequest")
+@CollectField(contextIndex = 1)
 public class AutoBookRequest implements Serializable, Comparable<AutoBookRequest> {
 
 

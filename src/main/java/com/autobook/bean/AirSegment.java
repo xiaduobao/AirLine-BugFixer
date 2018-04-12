@@ -1,5 +1,7 @@
 package com.autobook.bean;
 
+import com.autobook.annotation.CollectField;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
@@ -12,6 +14,7 @@ import java.util.List;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlRootElement(name = "AirSegment")
+@CollectField(contextIndex = 2)
 public class AirSegment {
 
 

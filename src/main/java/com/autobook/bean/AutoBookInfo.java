@@ -1,8 +1,11 @@
 package com.autobook.bean;
 
+import com.autobook.annotation.CollectField;
+
 /**
  * Created by jiabaowang on 2018/4/11.
  */
+@CollectField(contextIndex = 4)
 public class AutoBookInfo {
 
     private String requestTime;
