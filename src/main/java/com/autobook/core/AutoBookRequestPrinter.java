@@ -35,7 +35,7 @@ public class AutoBookRequestPrinter extends AbstractPrinter<AutoBookRequest,Obje
             StringBuffer buffer = new StringBuffer();
             for (String name : fieldNames) {
                 name = name.trim();
-                int index = ClassFieldList.indexOf(name);
+                int index = ClassFieldContext.indexOf(name);
                 String value = valueOfFieldByIndex(request, name, index);
                 buffer.append(value).append(style.getSeparator());
             }
