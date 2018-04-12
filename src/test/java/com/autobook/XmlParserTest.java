@@ -19,7 +19,7 @@ import java.io.StringReader;
 public class XmlParserTest {
 
     @Test
-    public void parserTest() throws IOException, JAXBException {
+    public void parser() throws IOException, JAXBException {
         AutoBookRequest request = null;
 
         JAXBContext context =  JAXBContext.newInstance(AutoBookRequest.class);
