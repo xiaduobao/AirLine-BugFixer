@@ -1,5 +1,6 @@
 package com.autobook.core;
 
+import com.autobook.config.Configuration;
 import org.apache.commons.lang3.StringUtils;
 
 import java.io.BufferedReader;
@@ -11,7 +12,7 @@ import java.io.IOException;
  */
 public class AutoBookXMLReader {
 
-    private static final String ABSOLUTE_PATH = "E:\\AutoBookRequestXML.xml";
+    private static final String ABSOLUTE_PATH = Configuration.valueOf("defualt.autobook.xml.location");
 
     public static String readFromFile(String uri) throws IOException {
         String path = null;

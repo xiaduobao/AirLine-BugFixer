@@ -1,5 +1,7 @@
 package com.autobook.core;
 
+import com.autobook.config.Configuration;
+
 /**
  * Created by jiabaowang on 2018/4/10.
  */
@@ -15,10 +17,9 @@ public abstract class AbstractStyleFactory {
 
     class DefualtStyle implements Style {
 
-        private static final String DEFUALT_STYLE =
-                "orderId | flightNo | dcity | acity | cabin | requestTime |credentialsNo | effectDate ";
+        private  final String DEFUALT_STYLE = Configuration.valueOf("defualt.print.style");
 
-        private static final String SEPARATOR = " | ";
+        private  final String SEPARATOR = Configuration.valueOf("defualt.separator");
 
         @Override
         public String getPrintFormat() {
