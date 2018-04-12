@@ -13,7 +13,7 @@ import java.util.List;
 /**
  * Created by jiabaowang on 2018/4/10.
  */
-public class AutoBookBuilder extends AbstractBuilder {
+public class AutoBookBuilder extends AbstractBuilder{
 
     private AutoBookRequestParser autoBookParser;
 
@@ -24,12 +24,11 @@ public class AutoBookBuilder extends AbstractBuilder {
         autoBookInfoParser = new AutoBookInfoParser(patternRegex);
     }
 
-
+    @Override
     public List<AutoBookRequest> buildFromUri(String filePath) throws IOException {
         String content = AutoBookXMLReader.readFromFile(filePath);
         List<AutoBookRequest> requests = buildFromSource(content, autoBookParser);
         List<AutoBookInfo> infos = buildFromSource(content, autoBookInfoParser);
-
         for (AutoBookRequest request : requests) {
             for (AutoBookInfo info : infos) {
                 if (request.getOrderId().equals(info.getOrderId())) {

@@ -1,6 +1,7 @@
 package com.autobook.core;
 
 import com.autobook.bean.AutoBookInfo;
+import com.autobook.bean.AutoBookRequest;
 
 import javax.xml.bind.JAXBException;
 import java.io.IOException;
@@ -10,12 +11,10 @@ import java.util.List;
 /**
  * Created by jiabaowang on 2018/4/11.
  */
-public class AbstractBuilder<T> implements Builder<T> {
-
+public abstract class AbstractBuilder<T> implements Builder<T> {
 
     @Override
     public List<T> buildFromSource(String source, Parser parser) {
-
         List<String> groups = parser.groupContent(source);
         List<T> ts = new ArrayList<>();
         for (String item : groups) {
@@ -30,4 +29,7 @@ public class AbstractBuilder<T> implements Builder<T> {
         }
         return ts;
     }
+
+    abstract List<T> buildFromUri(String filePath) throws IOException;
+
 }
