@@ -29,10 +29,9 @@ public class ClassFieldContext {
     static {
         fieldBaseMap = new HashMap<>();
         if (useClassLoaderStyle) {
-
             initFieldCollectedClass();
         }else{
-             fieldBaseMap.put(1,new FieldBase(AutoBookRequest.class, 1));
+            fieldBaseMap.put(1,new FieldBase(AutoBookRequest.class, 1));
             fieldBaseMap.put(2,new FieldBase(AirSegment.class, 2));
             fieldBaseMap.put(3,new FieldBase(Passenger.class, 3));
             fieldBaseMap.put(4,new FieldBase(AutoBookInfo.class, 4));

@@ -22,6 +22,4 @@ public abstract class AbstractPrinter<T,M> {
         }
         return buffer.substring(0, buffer.lastIndexOf("-"));
     }
-
-
 }
