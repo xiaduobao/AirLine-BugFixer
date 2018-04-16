@@ -37,7 +37,7 @@ public class AutoBookRequestPrinter extends AbstractPrinter<AutoBookRequest,Obje
                 name = name.trim();
                 int index = ClassFieldContext.indexOf(name);
                 String value = valueOfFieldByIndex(request, name, index);
-                buffer.append(value).append(style.getSeparator());
+                buffer.append(value).append(" ").append(style.getSeparator());
             }
             System.out.println(count++ + "    | " + buffer);
         }

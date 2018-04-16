@@ -18,8 +18,8 @@ public abstract class AbstractPrinter<T,M> {
     protected String fieldValues(List<? extends M> list, String name) {
         StringBuffer buffer = new StringBuffer();
         for (M m: list) {
-            buffer.append(fieldValue(m ,name)).append('-');
+            buffer.append(fieldValue(m ,name)).append("/");
         }
-        return buffer.substring(0, buffer.lastIndexOf("-"));
+        return buffer.substring(0, buffer.lastIndexOf("/"));
     }
 }
